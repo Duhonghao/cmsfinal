@@ -13,5 +13,4 @@ public class RouteConfig extends Routes {
 		//install 配置
 		this.add("/install",InstallController.class);
 	}
-
 }
