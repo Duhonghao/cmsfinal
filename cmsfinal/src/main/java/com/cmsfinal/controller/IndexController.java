@@ -20,4 +20,21 @@ public class IndexController  extends Controller{
 		renderHtml("404");
 	}
 	
+	
+	@ActionKey("/500")
+	public void error500()
+	{
+		renderHtml("500");
+	}
+	
+	
+	@ActionKey("/403")
+	public void notaccess()
+	{
+		renderHtml("403");
+	}
+	
+	
+	
+	
 }

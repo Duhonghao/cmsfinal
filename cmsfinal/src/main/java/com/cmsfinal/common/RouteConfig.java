@@ -8,7 +8,7 @@ public class RouteConfig extends Routes {
 
 	@Override
 	public void config() {
-		// index 首页配置
+		//index 首页配置
 		this.add("/",IndexController.class);
 		//install 配置
 		this.add("/install",InstallController.class);

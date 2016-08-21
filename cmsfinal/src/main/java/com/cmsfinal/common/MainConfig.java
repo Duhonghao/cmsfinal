@@ -44,6 +44,8 @@ public class MainConfig extends JFinalConfig {
 	public void configRoute(Routes me) {
 		//前台数据路由配置
 		me.add(new RouteConfig());
+		//后台管理员路由配置
+		me.add(new AdminRouteConfig());
 	}
 
 }

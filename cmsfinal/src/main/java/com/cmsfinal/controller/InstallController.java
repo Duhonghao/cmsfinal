@@ -1,5 +1,7 @@
 package com.cmsfinal.controller;
 
+import com.cmsfinal.validator.ContentValidator;
+import com.jfinal.aop.Before;
 import com.jfinal.core.Controller;
 
 public class InstallController extends Controller{
@@ -11,4 +13,9 @@ public class InstallController extends Controller{
 
 	}
 	
+	@Before(ContentValidator.class)
+	public void test()
+	{
+		renderHtml("hello");
+	}
 }
