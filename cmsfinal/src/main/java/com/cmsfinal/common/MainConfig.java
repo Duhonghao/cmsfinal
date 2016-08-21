@@ -14,9 +14,11 @@ public class MainConfig extends JFinalConfig {
 	@Override
 	public void configConstant(Constants me) {
 		//运行前的加载项目
-		PropKit.use("common/config.properties");
+		PropKit.use("config/common/config.properties");
 		//设置开发模式 从common/properties中读取
 		me.setDevMode(PropKit.getBoolean("common.devmode"));
+		//me.setError404View("/404");
+		//me.setError500View("/500");
 
 	}
 
