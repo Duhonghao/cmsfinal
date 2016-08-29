@@ -1,5 +1,6 @@
 package com.cmsfinal.common;
 
+import com.cmsfinal.handler.BaseConfigHandler;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -17,10 +18,16 @@ public class MainConfig extends JFinalConfig {
 	public void configConstant(Constants me) {
 		//运行前的加载项目
 		PropKit.use("config/common/config.properties");
+		PropKit.use("config/freemarker/freemarker.properties");
 		//设置开发模式 从common/properties中读取
 		me.setDevMode(PropKit.getBoolean("dev.devmode"));
+		me.setBaseViewPath("template");
+//		me.setBaseUploadPath("/upload");
+//		me.setBaseDownloadPath("/download");
+		me.setFreeMarkerViewExtension("*.ftl");
 		//me.setError404View("/404");
 		//me.setError500View("/500");
+	//	me.setViewType(ViewType.JSP); 
 
 	}
 
@@ -29,7 +36,8 @@ public class MainConfig extends JFinalConfig {
 		// TODO Auto-generated method stub
 		
 		//设置baseContextPath
-		me.add(new ContextPathHandler("baseContextPath"));
+		me.add(new ContextPathHandler("base"));
+		me.add(new BaseConfigHandler());
 		
 	}
 

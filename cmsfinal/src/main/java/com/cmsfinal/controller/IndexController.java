@@ -10,7 +10,8 @@ public class IndexController  extends Controller{
 	@Before(NoUrlPara.class)
 	public void index()
 	{
-		renderHtml("works");
+		setAttr("test", "hello test");
+		render("index.ftl");
 	}
 	
 	
