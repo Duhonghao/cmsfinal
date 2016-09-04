@@ -21,7 +21,7 @@ public class MainConfig extends JFinalConfig {
 		PropKit.use("config/freemarker/freemarker.properties");
 		//设置开发模式 从common/properties中读取
 		me.setDevMode(PropKit.getBoolean("dev.devmode"));
-		me.setBaseViewPath("template");
+		me.setBaseViewPath("/WEB-INF/template");
 //		me.setBaseUploadPath("/upload");
 //		me.setBaseDownloadPath("/download");
 		me.setFreeMarkerViewExtension("*.ftl");

@@ -1,2 +1,0 @@
-${test}
-${WEB_SITE_TITLE}${WEB_SITE_KEYWORD}
